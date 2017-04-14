@@ -56,7 +56,7 @@ function readConfig(success, error) {
                 success(config);
             }
             else {
-                fail('[Browser][cordova.js][xhrStatusChangeHandler] Could not XHR config.xml: ' + xhr.statusText);
+                fail('*1 [Browser][cordova.js][xhrStatusChangeHandler] Could not XHR config.xml: ' + xhr.statusText);
             }
         }
     };
@@ -74,7 +74,7 @@ function readConfig(success, error) {
         xhr.open("get", "/config.xml", true);
         xhr.send();
     } catch(e) {
-        fail('[Browser][cordova.js][readConfig] Could not XHR config.xml: ' + JSON.stringify(e));
+        fail('*2 Browser][cordova.js][readConfig] Could not XHR config.xml: ' + JSON.stringify(e));
     }
 }
 
